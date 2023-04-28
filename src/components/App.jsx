@@ -2,6 +2,8 @@ import React from 'react';
 import {
   BrowserRouter, Routes, Route, NavLink, useParams,
 } from 'react-router-dom';
+import Counter from './Counter';
+import Controls from './Controls';
 
 function Nav(props) {
   return (
@@ -17,7 +19,13 @@ function Nav(props) {
 }
 
 function Welcome(props) {
-  return <div>Welcome</div>;
+  return (
+    <div>
+      <div>Welcome</div>
+      <Counter />
+      <Controls />
+    </div>
+  );
 }
 
 function About(props) {
