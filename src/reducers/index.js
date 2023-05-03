@@ -2,10 +2,10 @@
 // this defines what your store state will look like
 import { combineReducers } from '@reduxjs/toolkit';
 
-import CountReducer from './count-reducer';
+import postsReducer from './postsReducer';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  posts: postsReducer,
 });
 
 export default rootReducer;

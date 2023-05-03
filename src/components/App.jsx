@@ -1,58 +1,23 @@
 import React from 'react';
 import {
-  BrowserRouter, Routes, Route, NavLink, useParams,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
-import Counter from './Counter';
-import Controls from './Controls';
-
-function Nav(props) {
-  return (
-    <nav>
-      <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
-      </ul>
-    </nav>
-  );
-}
-
-function Welcome(props) {
-  return (
-    <div>
-      <div>Welcome</div>
-      <Counter />
-      <Controls />
-    </div>
-  );
-}
-
-function About(props) {
-  return <div> All there is to know about me </div>;
-}
-
-function Test(props) {
-  const { id } = useParams();
-  return <div> ID: {id} </div>;
-}
-
-function FallBack(props) {
-  return <div>URL Not Found</div>;
-}
+import PostsScreen from './PostsScreen';
+import PostScreen from './PostScreen';
+import NewPostScreen from './NewPostScreen';
+import NavBar from './NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/test/:id" element={<Test />} />
-          <Route path="*" element={<FallBack />} />
-        </Routes>
-      </div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<PostsScreen />} />
+        <Route path="/posts/new" element={<NewPostScreen />} />
+        <Route path="/posts/:postID" element={<PostScreen />} />
+        <Route path="*" element={<div>URL not found</div>} />
+      </Routes>
     </BrowserRouter>
   );
 }
