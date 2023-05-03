@@ -15,7 +15,7 @@ export default function NewPostScreen() {
 
   return (
     <div className="border border-primary d-flex justify-content-center">
-      <div className="d-flex flex-column w-75 bg-light p-2 my-5">
+      <div className="d-flex flex-column w-75 border border-dark rounded bg-light p-4 my-5">
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
