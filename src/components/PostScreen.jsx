@@ -31,7 +31,7 @@ export default function PostScreen() {
   }, [post]);
 
   return (
-    <div className="border border-primary d-flex justify-content-center">
+    <div className="d-flex justify-content-center">
       <div className="d-flex flex-column w-75 border border-dark rounded bg-light p-4 my-5">
         <Image fluid className="w-50 align-self-center" src={post.coverUrl} />
         <div className="d-flex justify-content-end my-2">
