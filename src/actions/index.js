@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const ROOT_URL = 'https://platform.cs52.me/api';
+// const ROOT_URL = 'https://platform.cs52.me/api';
+const ROOT_URL = 'https://tfenaroli-lab5.onrender.com/api';
 const API_KEY = '?key=t_fenaroli';
 
 export const ActionTypes = {
